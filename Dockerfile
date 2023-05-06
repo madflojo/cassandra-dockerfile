@@ -3,5 +3,5 @@
 ## is set the specified keyspace will be created automatically after boot up. If no CASSANDRA_KEYSPACE environment 
 ## variable is defined an "example" keyspace will be created.
 FROM cassandra:latest
-RUN mv /docker-entrypoint.sh /docker-entrypoint2.sh
-ADD ./cassandra-wrapper.sh /docker-entrypoint.sh
+RUN mv /usr/local/bin/docker-entrypoint.sh /usr/local/bin/docker-entrypoint2.sh
+ADD ./cassandra-wrapper.sh /usr/local/bin/docker-entrypoint.sh
